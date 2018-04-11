@@ -40,7 +40,7 @@
                   @click="isRtl ? nextMonth() : previousMonth()"
                   class="prev"
                   v-bind:class="{ 'disabled' : isRtl ? nextMonthDisabled(pageTimestamp) : previousMonthDisabled(pageTimestamp) }">&lt;</span>
-              <span @click="showMonthCalendar" :class="allowedToShowView('month') ? 'up' : ''">{{ isYmd ? currYear : currMonthName }} {{ isYmd ? currMonthName : currYear }}</span>
+              <span @click="showMonthCalendar" :class="allowedToShowView('month') ? 'up' : ''">{{ isYmd ? `${currYear}年` : currMonthName }} {{ isYmd ? currMonthName : `${currYear}年` }}</span>
               <span
                   @click="isRtl ? previousMonth() : nextMonth()"
                   class="next"
